@@ -70,12 +70,91 @@
                         <viewLayoutGuide key="safeArea" id="Of3-Lx-hyi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Hobby Tracker" id="6Bf-Dk-lvv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7gh-6S-WS8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7gh-6S-WS8">
+                            <connections>
+                                <segue destination="9KX-6z-mbA" kind="presentation" id="e4x-K8-SBS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EoN-Lh-94E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="782.60869565217399" y="-91.071428571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="utS-SB-Gds">
+            <objects>
+                <viewController id="9KX-6z-mbA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ylb-3J-gPo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-cL-9Ih">
+                                <rect key="frame" x="20" y="80" width="374" height="252"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Friend: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iA-TD-aef">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Your Friend's name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxK-ni-hUI">
+                                        <rect key="frame" x="0.0" y="49" width="374" height="28.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Your Friend's HomeTown..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ke1-hO-WwO">
+                                        <rect key="frame" x="0.0" y="85.5" width="374" height="28.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hobbies: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c4-AG-HMh">
+                                        <rect key="frame" x="0.0" y="122" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Your Friend's Hobby 1..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxM-T4-UBC">
+                                        <rect key="frame" x="0.0" y="150.5" width="374" height="28.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Your Friend's Hobby 2..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26l-tx-Ajb">
+                                        <rect key="frame" x="0.0" y="187" width="374" height="28.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Your Friend's Hobby 3..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uq1-JM-0Wg">
+                                        <rect key="frame" x="0.0" y="223.5" width="374" height="28.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4e-uT-2pu">
+                                <rect key="frame" x="0.0" y="793" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="qa4-au-Zoh"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AON-bG-jAO"/>
+                                    <barButtonItem systemItem="save" id="yvV-BQ-6Ud"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="occ-lA-Zo2" firstAttribute="trailing" secondItem="2D3-cL-9Ih" secondAttribute="trailing" constant="20" id="Eka-gp-Fdl"/>
+                            <constraint firstItem="d4e-uT-2pu" firstAttribute="trailing" secondItem="occ-lA-Zo2" secondAttribute="trailing" id="LFt-Ob-5OY"/>
+                            <constraint firstAttribute="bottom" secondItem="d4e-uT-2pu" secondAttribute="bottom" id="Qsz-t6-kmH"/>
+                            <constraint firstItem="d4e-uT-2pu" firstAttribute="leading" secondItem="occ-lA-Zo2" secondAttribute="leading" id="Rid-au-4fc"/>
+                            <constraint firstItem="2D3-cL-9Ih" firstAttribute="leading" secondItem="occ-lA-Zo2" secondAttribute="leading" constant="20" id="Tea-25-dG4"/>
+                            <constraint firstItem="2D3-cL-9Ih" firstAttribute="top" secondItem="occ-lA-Zo2" secondAttribute="top" constant="80" id="co6-Fe-SPs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="occ-lA-Zo2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hd1-wE-ZCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795.6521739130437" y="-91.071428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Tm-6T-7bK">
