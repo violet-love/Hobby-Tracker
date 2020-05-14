@@ -10,7 +10,7 @@
         <!--Hobby Tracker-->
         <scene sceneID="hmB-n2-OwU">
             <objects>
-                <viewController id="KWg-fN-5iy" sceneMemberID="viewController">
+                <viewController id="KWg-fN-5iy" customClass="FriendsListViewController" customModule="HobbyTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q6i-U5-fJI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="JpR-4w-czb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendCell" id="JpR-4w-czb" customClass="FriendTableViewCell" customModule="HobbyTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JpR-4w-czb" id="PGz-nG-H0v">
@@ -72,7 +72,7 @@
                     <navigationItem key="navigationItem" title="Hobby Tracker" id="6Bf-Dk-lvv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7gh-6S-WS8">
                             <connections>
-                                <segue destination="9KX-6z-mbA" kind="presentation" id="e4x-K8-SBS"/>
+                                <segue destination="9KX-6z-mbA" kind="presentation" identifier="ModalNewFriend" id="e4x-K8-SBS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="782.60869565217399" y="-91.071428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--New Friend View Controller-->
         <scene sceneID="utS-SB-Gds">
             <objects>
-                <viewController id="9KX-6z-mbA" sceneMemberID="viewController">
+                <viewController id="9KX-6z-mbA" customClass="NewFriendViewController" customModule="HobbyTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ylb-3J-gPo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,6 +151,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="occ-lA-Zo2"/>
                     </view>
+                    <connections>
+                        <outlet property="hobby1TextField" destination="GxM-T4-UBC" id="eID-66-cT8"/>
+                        <outlet property="hobby2TextField" destination="26l-tx-Ajb" id="arM-TC-GnN"/>
+                        <outlet property="hobby3TextField" destination="Uq1-JM-0Wg" id="Y0j-hw-z6Q"/>
+                        <outlet property="homeTownTextField" destination="GxM-T4-UBC" id="o7z-R4-McU"/>
+                        <outlet property="nameTextField" destination="bxK-ni-hUI" id="a4Q-Y0-GK8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hd1-wE-ZCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
