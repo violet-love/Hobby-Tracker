@@ -21,6 +21,12 @@ class NewFriendViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func save(_ sender: Any) {
+        
+    }
+    @IBAction func cancel(_ sender: Any) {
+        
+    }
     
 
     /*

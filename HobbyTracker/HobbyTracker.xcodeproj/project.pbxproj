@@ -15,6 +15,7 @@
 		E855A340246DA5200054635C /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E855A33F246DA5200054635C /* FriendsListViewController.swift */; };
 		E855A342246DA5410054635C /* NewFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E855A341246DA5410054635C /* NewFriendViewController.swift */; };
 		E89A7C99246DA9160051EC83 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A7C98246DA9160051EC83 /* FriendTableViewCell.swift */; };
+		E89A7C9C246DB1620051EC83 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A7C9B246DB1620051EC83 /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E855A33F246DA5200054635C /* FriendsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsListViewController.swift; path = HobbyTracker/StoryBoards/FriendsListViewController.swift; sourceTree = SOURCE_ROOT; };
 		E855A341246DA5410054635C /* NewFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendViewController.swift; sourceTree = "<group>"; };
 		E89A7C98246DA9160051EC83 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		E89A7C9B246DB1620051EC83 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		46DD718D246AFE5C00366815 /* HobbyTracker */ = {
 			isa = PBXGroup;
 			children = (
+				E89A7C9D246DB1660051EC83 /* Models */,
 				E89A7C9A246DA9550051EC83 /* Views */,
 				E855A31B246B03180054635C /* Resources */,
 				E855A31A246B02F50054635C /* ViewControllers */,
@@ -103,6 +106,14 @@
 				E89A7C98246DA9160051EC83 /* FriendTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E89A7C9D246DB1660051EC83 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E89A7C9B246DB1620051EC83 /* Friend.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				46DD718F246AFE5C00366815 /* AppDelegate.swift in Sources */,
 				E855A342246DA5410054635C /* NewFriendViewController.swift in Sources */,
 				E89A7C99246DA9160051EC83 /* FriendTableViewCell.swift in Sources */,
+				E89A7C9C246DB1620051EC83 /* Friend.swift in Sources */,
 				E855A340246DA5200054635C /* FriendsListViewController.swift in Sources */,
 				46DD7191246AFE5C00366815 /* SceneDelegate.swift in Sources */,
 			);

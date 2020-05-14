@@ -9,11 +9,17 @@
 import UIKit
 
 class FriendsListViewController: UIViewController {
-
+    
+    @IBOutlet var tableView: UITableView!
+    
+    var friends: [Friend] = [Friend(name: "Tim Cook", homeTown: "Mobile, Alabama", hobbies: ["Being CEO of Apple"])]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Tell the table view that view controller are going to help it get the information it needs (delegate)
+        tableView.dataSource = self
+
     }
     
 
@@ -27,4 +33,19 @@ class FriendsListViewController: UIViewController {
     }
     */
 
+}
+
+
+extension FriendsListViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return friends.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath)
+        
+        return cell
+    }
 }
